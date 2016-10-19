@@ -27,7 +27,7 @@ function toChars(str) {
 	return str.split("");
 }
 
-module.exports.markovWord(data, opts) {
+module.exports(data, opts) {
   var word = randomElement(starters);
   sentence.push(word);
 
