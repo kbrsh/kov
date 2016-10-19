@@ -1,0 +1,25 @@
+{
+  "name": "kov",
+  "version": "0.1.0",
+  "description": "Markov chains made simple",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingPixil/kov.git"
+  },
+  "keywords": [
+    "markov",
+    "chain",
+    "markov",
+    "kov"
+  ],
+  "author": "Kabir Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KingPixil/kov/issues"
+  },
+  "homepage": "https://github.com/KingPixil/kov#readme"
+}
