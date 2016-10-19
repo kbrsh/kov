@@ -29,6 +29,12 @@ function toChars(str) {
 	return str.split("");
 }
 
+function clear() {
+  sentence = [];
+  map = {};
+  starters = [];
+}
+
 module.exports = function(data, opts) {
   seed(data);
   var word = randomElement(starters);
@@ -40,6 +46,7 @@ module.exports = function(data, opts) {
     sentence.push(word);
     if (sentence.length > (opts.min) && sentence.length < (opts.max) && map[lastWord] === [null]) break;
   }
-
-  return sentence.join(" ");
+  var readableSentence = sentence.join(" ");
+  clear();
+  return readableSentence;
 }
