@@ -1,6 +1,6 @@
 {
   "name": "kov",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Markov chains made simple",
   "main": "index.js",
   "scripts": {
