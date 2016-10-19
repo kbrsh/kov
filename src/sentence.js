@@ -3,14 +3,16 @@ var map = {};
 var starters = [];
 
 
-for (var i = 0; i < data.length; i++) {
-  var words = toWords(data[i]);
-  starters.push(words[0]);
-  for (var j = 0; j < words.length; j++) {
-    if (map.hasOwnProperty(words[j])) {
-      map[words[j]].push(words[j + 1]);
-    } else {
-      map[words[j]] = [words[j + 1]];
+function seed(data) {
+  for (var i = 0; i < data.length; i++) {
+    var words = toWords(data[i]);
+    starters.push(words[0]);
+    for (var j = 0; j < words.length; j++) {
+      if (map.hasOwnProperty(words[j])) {
+        map[words[j]].push(words[j + 1]);
+      } else {
+        map[words[j]] = [words[j + 1]];
+      }
     }
   }
 }
@@ -27,7 +29,8 @@ function toChars(str) {
 	return str.split("");
 }
 
-module.exports(data, opts) {
+module.exports = function(data, opts) {
+  seed(data);
   var word = randomElement(starters);
   sentence.push(word);
 
